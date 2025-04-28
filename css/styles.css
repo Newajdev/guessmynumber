@@ -1,4 +1,4 @@
-.gameindex, .PlayComputer, .PlayFriend, .win, .lose {
+.gameindex, .PlayComputer, .PlayFriend, .win, .lose, .Opponent {
     position: absolute;
     top: 0;
     left: 0;
