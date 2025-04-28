@@ -17,53 +17,59 @@
 
 <body>
     <div class="gameindex">
-        <h1>Welcome To Guess A number</h1>
-        <h4>Select one option to Start the game</h4>
-        <button id="Pcomputer">Play with Computer <i class="fa-solid fa-computer"></i> </button>
-        <button  id="Pfriend">Play with Friend <i class="fa-solid fa-users"></i> </button>
+        <div class="title">
+            <h2>Welcome</h2>
+            <h3>to</h3>
+            <h1>Guess A number</h1>
+        </div>
+        <h5>Select one option to Start the game</h5>
+        <div class="btnGroup">
+            <button id="Pcomputer" class="pwcom">Play with Computer <i class="fa-solid fa-computer"></i> </button>
+            <button id="Pfriend" class="pwFri">Play with Friend <i class="fa-solid fa-users"></i> </button>
+        </div>
     </div>
     <div class="PlayComputer">
-        <h2>Guess My Number</h2>
+        <h2 class="sub-Title">Guess My Number</h2>
         <h4 class="Comnumber" style="display: none;"></h4>
         <h4>Hint: <span class="hint">I select a orde number</span></h4>
-        <h4>Life: <span class="lifeCount">02</span></h4>
+        <h4 class="Life"><i class="fa-solid fa-heart-circle-check"></i> Life: <span class="lifeCount">02</span></h4>
         <p class="inputerror"></p>
         <div class="bgroup">
             <input type="text" name=" " id="" class="inputNum">
-            <button id="Submit">Submit</button>
+            <div><button id="Submit" class="SubmitButton">Submit</button></div>
         </div>
     </div>
 
     <div class="PlayFriend">
-        <h2>Player One</h2>
+        <h2 class="sub-Title">Player One</h2>
         <h4>Select A number</h4>
-        <p class="ChallagerError"></p> 
+        <p class="ChallagerError"></p>
         <div class="bgroup">
             <input type="password" name=" " id="" class="inputPone">
-            <button id="ChallageSubmit">Submit</button>
-        </div>        
+            <button id="ChallageSubmit" class="SubmitButton">Submit</button>
+        </div>
     </div>
 
     <div class="Opponent">
-        <h2>Player Two(oponent)</h2>
+        <h2 class="sub-Title">Player Two (oponent)</h2>
         <h4>Hint: <span class="hintForOpponent">I select a orde number</span></h4>
-        <h4>Life: <span class="lifeofOpponent">03</span></h4>
-        <p class="OpponentError"></p> 
+        <h4 class="Life"><i class="fa-solid fa-heart-circle-check"></i> Life: <span class="lifeofOpponent">03</span></h4>
+        <p class="OpponentError"></p>
         <div class="bgroup">
             <input type="password" name=" " id="" class="OpponentInput">
-            <button id="OpponentCheck">Check</button>
-        </div>        
+            <button id="OpponentCheck" class="SubmitButton">Check</button>
+        </div>
     </div>
 
     <div class="Win">
-        <h2>Congraculations</h2>
+        <h2 class="sub-Title">Congraculations</h2>
         <h2>You Are Win</h2>
-        <button onclick="PlayAgain()">Play Again <i class="fa-solid fa-rotate-left"></i></button>
+        <button onclick="PlayAgain()" class="SubmitButton">Play Again <i class="fa-solid fa-rotate-left"></i></button>
     </div>
     <div class="lose">
-        <h2>Sorry</h2>
+        <h2 class="sub-Title">Sorry</h2>
         <h2>You Are Lose</h2>
-        <button onclick="PlayAgain()">Play Again <i class="fa-solid fa-rotate-left"></i></button>
+        <button onclick="PlayAgain()" class="SubmitButton">Play Again <i class="fa-solid fa-rotate-left"></i></button>
     </div>
 
 

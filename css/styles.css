@@ -1,5 +1,113 @@
-.gameindex, .PlayComputer, .PlayFriend, .win, .lose, .Opponent {
+body{
+    
+    background-image: url(../image/bg-imag.png);
+    
+    
+}
+.gameindex, .PlayComputer, .PlayFriend, .Win, .lose, .Opponent {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 100px;
+    background-color: #dfe9b1;
+    border-radius: 50px;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid #8e966d;
+}
+.PlayComputer{
+    background-color: #8ee6c1;
+    border: 5px solid #6eb497;
+}
+.PlayFriend{
+    background-color: #e6a78e;
+    border: 5px solid #a77967;    
+}
+.Opponent{
+    background-color: #e6a78e;
+    border: 5px solid #a87967;
+}
+.Win{
+    background-color: #8ee6c1;
+    border: 5px solid #5f9b82;
+}
+.Win .sub-Title{
+    color: #094e00;
+    
+}
+.Win .SubmitButton{
+    margin: 20px 0px;
+}
+.lose{
+    background-color: #ff7777;
+    color: #ffffff;
+    border: 5px solid #c55b5b;
+}
+.lose .SubmitButton{
+    background-color: #ce0404;
+    border: #ce0404;
+    color: #ffffff;
+    margin: 20px 0px;
+}
+
+.title{
+    text-align: center;
+}
+.title h1{
+    font-size: 48px;
+    font-weight: bolder;
+}
+.sub-Title{
+    font-size: 48px;
+    font-weight: bolder;
+}
+
+
+.pwcom, .pwFri {
+    padding: 10px;
+    border-radius: 10px;
+    background: #023047;
+    color: aliceblue;
+    border: 1px solid #012233 ;
+}
+
+.pwFri{
+    background: #fb8500;
+    color: #012233;
+    border: 1px solid #c78f03 ;
+}
+
+.btnGroup{
+    margin-top: 20px;
+}
+.Life{
+    color: #7c4200;
+}
+.inputerror, .OpponentError, .ChallagerError{
+    color: red;
+}
+.bgroup{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bgroup input{
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.SubmitButton{
+    padding: 10px;
+    border-radius: 10px;
+    background: #023047;
+    color: aliceblue;
+    border: 1px solid #012233 ;
 }

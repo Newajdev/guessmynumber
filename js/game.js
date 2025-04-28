@@ -129,20 +129,21 @@ OpponentCheck.addEventListener('click', function () {
         OpponentInput.value = "";
     } else {
         
-        if (OppLife > 1) {
-            OppLife--
-            lifeofOpponent.innerText = `0${OppLife}`
+        if (OppLife > 0) {
+            OppLife--;
+            lifeofOpponent.innerText =`0${OppLife}`;
+            
             if (OpponentInput.value === InputFROMPlayone.value) {
                 win.style.visibility = "visible";
                 Opponent.style.visibility = "hidden";
-            } else {
             }
         } else {
             lose.style.visibility = "visible";
             Opponent.style.visibility = "hidden";
-
         }
+        
         OpponentInput.value = "";
+        
 
     }
     
