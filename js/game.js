@@ -47,7 +47,7 @@ btnComputer.addEventListener('click', function () {
 
     const randomNumber = Math.round(Math.random() * 11);
     ComNumber.innerText = randomNumber;
-    
+
     if (randomNumber % 2 == 0) {
         hint.innerText = "I Select A Even Number"
     } else {
@@ -56,25 +56,26 @@ btnComputer.addEventListener('click', function () {
 
     btnSubmit.addEventListener("click", function () {
         if (!InputNumber.value) {
-            inputerror.innerText = "Please write something";    
+            inputerror.innerText = "Please write something";
         } else if (isNaN(InputNumber.value)) {
-            inputerror.innerText = "Please number something";   
+            inputerror.innerText = "Please number something";
             InputNumber.value = '';
         } else if (!(InputNumber.value > 0 && InputNumber.value <= 10)) {
-            inputerror.innerText = "Enter A number Between 0 to 10";   
+            inputerror.innerText = "Enter A number Between 0 to 10";
             InputNumber.value = '';
         } else {
-            if (life > 1) {
+            if (life > 0) {
                 life--
                 lifeCount.innerText = `0${life}`
                 if (InputNumber.value === ComNumber.innerText) {
                     win.style.visibility = "visible";
                     playwithComputer.style.visibility = "hidden";
+                }else if(life===0) {
+                    lose.style.visibility = "visible";
+                    playwithComputer.style.visibility = "hidden";
+                    lifeCount.innerText = "00";
                 }
-            } else {
-                lose.style.visibility = "visible";
-                playwithComputer.style.visibility = "hidden";
-            }
+            } 
             InputNumber.value = '';
         }
     });
@@ -90,7 +91,7 @@ btnFriend.addEventListener('click', function () {
 
 btnCSubmit.addEventListener('click', function () {
     const ChallengingNumber = InputFROMPlayone.value;
-    
+
 
 
     if (ChallengingNumber % 2 == 0) {
@@ -101,12 +102,12 @@ btnCSubmit.addEventListener('click', function () {
 
 
     if (!ChallengingNumber) {
-        ChallagerError.innerText='Please write something';
+        ChallagerError.innerText = 'Please write something';
     } else if (isNaN(ChallengingNumber)) {
-        ChallagerError.innerText='Please number something';        
+        ChallagerError.innerText = 'Please number something';
         InputFROMPlayone.value = "";
     } else if (!(ChallengingNumber > 0 && ChallengingNumber <= 10)) {
-        ChallagerError.innerText='Enter A number Between 0 to 10';
+        ChallagerError.innerText = 'Enter A number Between 0 to 10';
         InputFROMPlayone.value = "";
     } else {
         Opponent.style.visibility = 'visible';
@@ -116,37 +117,40 @@ btnCSubmit.addEventListener('click', function () {
 
 let OppLife = 3;
 
+
 OpponentCheck.addEventListener('click', function () {
     const OpponentNumber = OpponentInput.value;
 
+    
+
     if (!OpponentNumber) {
-        OpponentError.innerText="Please write something";
+        OpponentError.innerText = "Please write something";
     } else if (isNaN(OpponentNumber)) {
-        OpponentError.innerText="Please number something";
+        OpponentError.innerText = "Please enter a number";
         OpponentInput.value = "";
     } else if (!(OpponentNumber > 0 && OpponentNumber <= 10)) {
-        OpponentError.innerText="Enter A number Between 0 to 10";
+        OpponentError.innerText = "Enter A number Between 1 to 10";
         OpponentInput.value = "";
     } else {
-        
+
         if (OppLife > 0) {
             OppLife--;
-            lifeofOpponent.innerText =`0${OppLife}`;
-            
-            if (OpponentInput.value === InputFROMPlayone.value) {
+            lifeofOpponent.innerText = `0${OppLife}`;
+
+            if (OpponentNumber === InputFROMPlayone.value) {
                 win.style.visibility = "visible";
                 Opponent.style.visibility = "hidden";
+            } else if (OppLife === 0) {
+                lose.style.visibility = "visible";
+                Opponent.style.visibility = "hidden";
+                lifeofOpponent.innerText = "00";
             }
-        } else {
-            lose.style.visibility = "visible";
-            Opponent.style.visibility = "hidden";
         }
-        
         OpponentInput.value = "";
-        
+
 
     }
-    
+
 
 })
 
