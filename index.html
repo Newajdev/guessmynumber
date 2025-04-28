@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess A number</title>
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Css -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="gameindex">
+        <h1>Welcome To Guess A number</h1>
+        <h4>Select one option to Start the game</h4>
+        <button id="Pcomputer">Play with Computer <i class="fa-solid fa-computer"></i> </button>
+        <button  onclick="Green()">Play with Friend <i class="fa-solid fa-users"></i> </button>
+    </div>
+    <div class="PlayComputer">
+        <h2>Guess My Number</h2>
+        <h4 class="Comnumber" style="display: none;"></h4>
+        <h4>Hint: <span class="hint">I select a orde number</span></h4>
+        <h4>Life: <span class="lifeCount">02</span></h4>
+        <div class="bgroup">
+            <input type="text" name=" " id="" class="inputNum">
+            <button id="Submit">Submit</button>
+        </div>
+    </div>
+    <div class="PlayFriend">
+        <h2>Player One</h2>
+        <h4>Select A number</h4> 
+        <div class="bgroup">
+            <input type="password" name=" " id="">
+            <button>Submit</button>
+        </div>        
+    </div>
+    <div class="Win">
+        <h2>Congraculations</h2>
+        <h2>You Are Win</h2>
+        <button onclick="PlayAgain()">Play Again <i class="fa-solid fa-rotate-left"></i></button>
+    </div>
+    <div class="lose">
+        <h2>Sorry</h2>
+        <h2>You Are Lose</h2>
+        <button onclick="PlayAgain()">Play Again <i class="fa-solid fa-rotate-left"></i></button>
+    </div>
+
+
+
+
+    <script src="js/game.js"></script>
+</body>
+
+</html>

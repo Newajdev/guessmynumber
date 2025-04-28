@@ -1,0 +1,28 @@
+@keyframes html {
+    from{
+        scale: 1;
+    }
+    to{
+        scale: 1.2;
+    }
+}
+@keyframes list {
+    from{
+        top:325px;
+        scale: 1;
+    }
+    to{
+        top:335px;
+        scale: 1.02;
+    }
+}
+@keyframes edit {
+    from{
+        top:225px;
+        scale: 1;
+    }
+    to{
+        top:235px;
+        scale: 1.02;
+    }
+}
